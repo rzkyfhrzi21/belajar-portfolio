@@ -1,0 +1,255 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Rizky Fahrezi | Portfolio</title>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="brief introduction of myself." />
+    <meta charset="UTF-8" />
+    <link type="text/css" rel="stylesheet" id="theme-style" href="style.css" />
+    <link rel="icon" href="img/logo2.png" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <div class="rgb">
+    <body>
+      <header>
+        <nav>
+          <ul class="navbar">
+            <li class="list"><a href="#about" class="active">About Me</a></li>
+            <li class="list"><a href="#projects">My Projects</a></li>
+            <li class="list"><a href="#contact">Contact Me</a></li>
+            <li class="list"><a href="#" id="toggleStyle">Toggle Style</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <hr />
+      <main>
+        <section id="about">
+          <h2>About Me</h2>
+          <img src="img/hero.png" width="100px" height="100px" alt="my pict" />
+          <p>
+            I am
+            <img src="img/logo1.png" alt="logo" width="100px" height="50px" />,
+            a passionate highstudent with experience in sleeping 10 hours
+            non-stop, going to bed at 3 am then waking up at 5 am.<b
+              >+ feeding cats.</b
+            >
+          </p>
+          <audio id="bgm" controls loop autoplay>
+            <source
+              src="audio/bahagia-lagi.mp3"
+              type="audio/mpeg"
+              alt="rizky song"
+            />
+          </audio>
+        </section>
+
+        <section id="projects">
+          <h2>My Projects</h2>
+          <ul>
+            <li>
+              <a href="https://rzkyfhrzi21.is-a.dev/" target="_blank"
+                >Portfolio Belum Kelar</a
+              >
+              <p>
+                <img
+                  src="img/port.png"
+                  alt="Screenshot portfolio"
+                  width="380px"
+                  height="200px"
+                />
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </li>
+
+            <li>
+              <a href="#" target="_blank"
+                >Aplikasi Deteksi Penyakit Tanaman Padi</a
+              >
+              <p>
+                <img
+                  src="img/deteksi-padi.png"
+                  alt="Aplikasi Deteksi Penyakit Tanaman Padi"
+                  width="380px"
+                  height="200px"
+                />
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </li>
+            <li>
+              <a href="#" target="_blank">Aplikasi Android MLBB Tutorial</a>
+              <p>
+                <img
+                  src="img/mlbb-tutorial.png"
+                  alt="MLBB Tutorial"
+                  width="380px"
+                  height="200px"
+                />
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <section id="contact">
+          <h2>Contact Me</h2>
+          <p>
+            Feel free to reach out to me for any questions, collaborations, or
+            fishing together opportunities.
+          </p>
+          <ul>
+            <li>
+              <div class="goyang">
+                <a href="https://github.com/rzkyfhrzi21" target="_blank">
+                  <img
+                    src="img/github.png"
+                    height="20px"
+                    width="20px"
+                    alt="GitHub picture"
+                  />
+                  Rzkyfhrzi21
+                </a>
+              </div>
+            </li>
+            <li>
+              <div class="goyang">
+                <a href="https://instagram.com/rzkydev666" target="_blank">
+                  <img
+                    src="img/ig.svg"
+                    height="20px"
+                    width="20px"
+                    alt="GitHub picture"
+                  />
+                  Rzkydev666
+                </a>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </main>
+      <hr />
+      <footer>
+        <p>&copy; 2026 Rzkydev666 Portfolio Ngawur. All rights reserved.</p>
+      </footer>
+      <script>
+        /* =========================
+     AUDIO (DEFAULT START 2:00) + P PLAY/PAUSE
+     ========================= */
+        const audio = document.getElementById("bgm");
+        const START_AT = 120; // 2 menit
+
+        // Set posisi awal ke 2:00 saat metadata kebaca
+        audio.addEventListener("loadedmetadata", () => {
+          if (!isNaN(audio.duration) && audio.duration > START_AT) {
+            audio.currentTime = START_AT;
+          } else {
+            audio.currentTime = 0;
+          }
+        });
+
+        // Autoplay setelah interaksi user pertama
+        const startAudio = async () => {
+          try {
+            if (
+              !isNaN(audio.duration) &&
+              audio.duration > START_AT &&
+              audio.currentTime < START_AT
+            ) {
+              audio.currentTime = START_AT;
+            }
+            await audio.play();
+
+            document.removeEventListener("click", startAudio);
+            document.removeEventListener("touchstart", startAudio);
+          } catch (e) {
+            console.log("Autoplay diblokir:", e);
+          }
+        };
+
+        document.addEventListener("click", startAudio);
+        document.addEventListener("touchstart", startAudio);
+
+        // Tombol P = Play / Pause saja
+        document.addEventListener("keydown", async (e) => {
+          const tag = e.target?.tagName?.toLowerCase();
+          if (tag === "input" || tag === "textarea") return;
+
+          if (e.key === "p" || e.key === "P") {
+            e.preventDefault();
+            try {
+              if (audio.paused) {
+                if (
+                  !isNaN(audio.duration) &&
+                  audio.duration > START_AT &&
+                  audio.currentTime < START_AT
+                ) {
+                  audio.currentTime = START_AT;
+                }
+                await audio.play();
+              } else {
+                audio.pause();
+              }
+            } catch (err) {
+              console.log("Tidak bisa play/pause:", err);
+            }
+          }
+        });
+
+        /* =========================
+     THEME TOGGLE (DEFAULT CHAOS)
+     ========================= */
+        const toggleBtn = document.getElementById("toggleStyle");
+        const themeLink = document.getElementById("theme-style");
+
+        const CHAOS = "style.css";
+        const NORMAL = "style1.css";
+
+        // Default: Chaos Mode
+        themeLink.setAttribute("href", CHAOS);
+        toggleBtn.textContent = "Normal Mode";
+
+        toggleBtn.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const currentTheme = themeLink.getAttribute("href");
+
+          if (currentTheme === CHAOS) {
+            themeLink.setAttribute("href", NORMAL);
+            toggleBtn.textContent = "Chaos Mode";
+          } else {
+            themeLink.setAttribute("href", CHAOS);
+            toggleBtn.textContent = "Normal Mode";
+          }
+        });
+      </script>
+    </body>
+  </div>
+</html>
